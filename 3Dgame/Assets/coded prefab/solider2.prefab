@@ -124,8 +124,8 @@ MonoBehaviour:
   atk: 10
   atkVar: 2
   atkSpeed: 2.5
-  reach: 13
-  attack_radius: 13
+  reach: 15
+  attack_radius: 15
   explosion: {fileID: 0}
   explosion_size: 2
   detected: []
@@ -177,7 +177,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 12
+  m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8536470906886868033
 GameObject:
