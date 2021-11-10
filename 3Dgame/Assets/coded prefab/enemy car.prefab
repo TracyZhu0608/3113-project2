@@ -95,7 +95,7 @@ MonoBehaviour:
   detected: []
   Fire_pos: {fileID: 5604305505187882369}
   bullet_force: 50
-  Bulletprefab: {fileID: 1204952308834830661, guid: 944c2dd5c31d3d448903796cad94b773, type: 3}
+  Bulletprefab: {fileID: 2444828773258566408, guid: 4a2973d1877adad48b368066328f1e76, type: 3}
 --- !u!135 &5604305505333103901
 SphereCollider:
   m_ObjectHideFlags: 0
