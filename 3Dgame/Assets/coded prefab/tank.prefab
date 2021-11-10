@@ -391,7 +391,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 14
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5272874734516066384
 MonoBehaviour:
@@ -413,8 +413,10 @@ MonoBehaviour:
   atk: 10
   atkVar: 2
   atkSpeed: 2.5
-  reach: 20
-  attack_radius: 10
+  reach: 15
+  attack_radius: 15
+  explosion: {fileID: 0}
+  explosion_size: 2
   detected: []
   Fire_pos: {fileID: 5021962176755784538}
   bullet_force: 50

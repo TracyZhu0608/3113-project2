@@ -90,6 +90,8 @@ MonoBehaviour:
   atkSpeed: 2.5
   reach: 20
   attack_radius: 15
+  explosion: {fileID: 0}
+  explosion_size: 2
   detected: []
   Fire_pos: {fileID: 5604305505187882369}
   bullet_force: 50
@@ -105,7 +107,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 14
+  m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5604305505333103900
 Rigidbody:

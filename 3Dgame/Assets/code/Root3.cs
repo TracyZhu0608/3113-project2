@@ -30,10 +30,12 @@ public class Root3 : MonoBehaviour
     public float bullet_force = 50f;
     public GameObject Bulletprefab; 
     private NavMeshAgent agent;
+    private bool auto_destination = false;
     // Start is called before the first frame update
     void status(){
         if(this.tag == "ai"){
-            if((agent.destination.x - agent.nextPosition.x)<1f && (agent.destination.z - agent.nextPosition.z) <1f){
+            print(1);
+            if((System.Math.Abs(agent.destination.x - agent.nextPosition.x))<20f && (System.Math.Abs(agent.destination.z - agent.nextPosition.z)) <20f){
             currentState = STATE.Idle;
             }
             else{
@@ -69,8 +71,7 @@ public class Root3 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         status();
     }
     void OnTriggerEnter(Collider other){
