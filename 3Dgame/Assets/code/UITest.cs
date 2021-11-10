@@ -12,6 +12,8 @@ public class UITest : MonoBehaviour
     public Animator animator;
 
     public GameObject mission;
+    public AudioSource assignment;
+    public AudioSource yes;
 
 
     void Start()
@@ -41,6 +43,7 @@ public class UITest : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(Type(sentence));
+        yes.Play();
 
     }
 
@@ -55,6 +58,7 @@ public class UITest : MonoBehaviour
     public void End(){
         animator.SetBool("isopen", false);
         mission.SetActive(true);
+        assignment.Play();
         Debug.Log("end");
     }
     
