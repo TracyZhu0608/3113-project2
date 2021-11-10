@@ -19,7 +19,8 @@ public class Root3 : MonoBehaviour
     public float atkSpeed = 2.5f;
     public float reach = 20;
     public int attack_radius = 10;
-
+    public GameObject explosion;
+    public float explosion_size=2f;
     [Header("Detection")]
     public List<Root3> detected;
 
@@ -46,6 +47,9 @@ public class Root3 : MonoBehaviour
             hp = hp - (damage - def);
         }
         if(hp<=0){
+            explosion.transform.localScale = Vector3.one * explosion_size;
+            Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
+            //explosion.Play();
             Destroy(gameObject);
         }
     }

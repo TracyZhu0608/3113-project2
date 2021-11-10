@@ -15,7 +15,7 @@ public class Rotator : MonoBehaviour
         if (way == "z") { transform.Rotate(new Vector3(0, 0, 45) * Time.deltaTime); }
         if (way == "y") { transform.Rotate(new Vector3(0, 45, 0) * Time.deltaTime); }
         float dist1 = Vector3.Distance(transform.position, player.transform.position);
-        print(dist1);
+        //print(dist1);
         if (dist1 <= distance)
         {
             gameObject.SetActive(false);
