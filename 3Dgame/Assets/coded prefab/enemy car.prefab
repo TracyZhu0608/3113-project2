@@ -83,13 +83,13 @@ MonoBehaviour:
   currentState: 0
   myStateText: {fileID: 0}
   target1: 1
-  hp: 50
+  hp: 100
   def: 5
-  atk: 10
+  atk: 15
   atkVar: 2
-  atkSpeed: 2.5
-  reach: 20
-  attack_radius: 20
+  atkSpeed: 3.5
+  reach: 15
+  attack_radius: 15
   explosion: {fileID: 0}
   explosion_size: 2
   detected: []
@@ -107,7 +107,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 15
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5604305505333103900
 Rigidbody:

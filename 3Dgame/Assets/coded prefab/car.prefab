@@ -50,7 +50,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 3
-  m_Speed: 3.5
+  m_Speed: 7.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -101,7 +101,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 18
+  m_Radius: 13
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &435458943663562581
 MonoBehaviour:
@@ -118,13 +118,13 @@ MonoBehaviour:
   currentState: 0
   myStateText: {fileID: 0}
   target1: 0
-  hp: 50
+  hp: 70
   def: 5
-  atk: 10
+  atk: 15
   atkVar: 2
   atkSpeed: 2.5
-  reach: 18
-  attack_radius: 18
+  reach: 13
+  attack_radius: 13
   explosion: {fileID: 0}
   explosion_size: 2
   detected: []

@@ -61,7 +61,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 4.5
-  m_Speed: 4.5
+  m_Speed: 9
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -88,9 +88,9 @@ MonoBehaviour:
   currentState: 0
   myStateText: {fileID: 0}
   target1: 0
-  hp: 50
+  hp: 80
   def: 5
-  atk: 10
+  atk: 15
   atkVar: 2
   atkSpeed: 2.5
   reach: 22
