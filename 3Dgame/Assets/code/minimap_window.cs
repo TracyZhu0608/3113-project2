@@ -13,7 +13,7 @@ public class minimap_window : MonoBehaviour
 
     public Collider mapCollider;
     public float limit_maxY,limit_minY,limit_maxX,limit_minX;
-    public float z=1;
+    public float z=0.1f;
     private Vector3 GetCameraFrustumPoint(Vector3 position)
     {
         var positionRay = Camera.main.ScreenPointToRay(position);
@@ -24,16 +24,15 @@ public class minimap_window : MonoBehaviour
 
     }
 
-
     public void OnPostRender()
     {
 
 
         Vector3 minViewportPoint = minimap.WorldToViewportPoint(GetCameraFrustumPoint(new Vector3(0f, 0f)));
         Vector3 maxViewportPoint = minimap.WorldToViewportPoint(GetCameraFrustumPoint(new Vector3(Screen.width, Screen.height)));
-        //print("wide"+Screen.width);
-        //print("height"+Screen.height);
 
+        //print(Screen.width);
+        //print(Screen.height);
         float minX = minViewportPoint.x;
         float minY = minViewportPoint.y;
 
@@ -44,7 +43,10 @@ public class minimap_window : MonoBehaviour
         if(minY<limit_minY){minY=limit_minY;}
         if(maxX>limit_maxX){maxX=limit_maxX;}
         if(maxY>limit_maxY){maxY=limit_maxY;}
-        //print(maxX);
+        //print("maxX"+maxX);
+        //print("minX"+minX);
+        //print("minY"+minY);
+        //print("maxY"+maxY);
 
         GL.PushMatrix();
         {
