@@ -81,7 +81,7 @@ public class Tutorial : MonoBehaviour
 
                     if (firsttxt2 == true){
                         txt2.SetActive(false);
-                        StartCoroutine(ShowMessage(txt3, 5));
+                        StartCoroutine(ShowMessage(txt3, 10));
                         firsttxt2 = false;
                     }
                 }
