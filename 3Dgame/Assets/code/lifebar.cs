@@ -30,7 +30,7 @@ public class lifebar : MonoBehaviour
     private void Update()
     {
         currenthp = myRoot.hp;
-        print(currenthp);
+        //print(currenthp);
         hpSlider.value = currenthp/fullhp;
         if(target==null) return;
 

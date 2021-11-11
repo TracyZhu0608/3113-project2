@@ -59,7 +59,7 @@ public class enemyRoot3 : MonoBehaviour
     void OnTriggerEnter(Collider other){
         if(other.tag == "enemy"){
             detected.Add(other.GetComponent<Root3>());
-            print("add");
+            //print("add");
         }
     }
     void OnTriggerExit(Collider other){

@@ -35,12 +35,34 @@ public class Root3 : MonoBehaviour
     void status(){
         if(this.tag == "ai"){
             //print(1);
-            if((System.Math.Abs(agent.destination.x - agent.nextPosition.x))<20f && (System.Math.Abs(agent.destination.z - agent.nextPosition.z)) <20f){
-            currentState = STATE.Idle;
+            if(GameObject.FindWithTag("key")){
+                if((gameObject.GetComponent("player") as player) == null){
+                    if((System.Math.Abs(agent.destination.x - agent.nextPosition.x))<20f && (System.Math.Abs(agent.destination.z - agent.nextPosition.z)) <20f){
+                        currentState = STATE.Idle;
+                    }
+                    else{
+                        currentState = STATE.Moving;
+                        agent.isStopped = false;
+                    }
+                }
+                else{
+                    if((System.Math.Abs(agent.destination.x - agent.nextPosition.x))<0.5f && (System.Math.Abs(agent.destination.z - agent.nextPosition.z)) <0.5f){
+                        currentState = STATE.Idle;
+                    }
+                    else{
+                        currentState = STATE.Moving;
+                        agent.isStopped = false;
+                    }
+                }
             }
             else{
-                currentState = STATE.Moving;
-                agent.isStopped = false;
+                if((System.Math.Abs(agent.destination.x - agent.nextPosition.x))<20f && (System.Math.Abs(agent.destination.z - agent.nextPosition.z)) <20f){
+                    currentState = STATE.Idle;
+                }
+                else{
+                    currentState = STATE.Moving;
+                    agent.isStopped = false;
+                }
             }
         }
     }
@@ -48,7 +70,7 @@ public class Root3 : MonoBehaviour
         if((damage-def)>=0){
             hp = hp - (damage - def);
         }
-        if(hp<=0){
+        if(hp<=0&&((gameObject.GetComponent("player") as player) == null)){
             explosion.transform.localScale = Vector3.one * explosion_size;
             Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
             //explosion.Play();
@@ -78,7 +100,7 @@ public class Root3 : MonoBehaviour
         if (target1 == target.enemy){
             if(other.tag == "enemy"){
             detected.Add(other.GetComponent<Root3>());
-            print("add");
+            //print("add");
             }
         }
         else{
