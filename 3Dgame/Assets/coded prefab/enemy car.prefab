@@ -89,7 +89,7 @@ MonoBehaviour:
   atk: 15
   atkVar: 2
   atkSpeed: 3.5
-  reach: 152
+  reach: 16
   attack_radius: 20
   explosion: {fileID: 1427962332153456, guid: 301583a5af63a494298d60cd9f296909, type: 3}
   explosion_size: 2
@@ -108,7 +108,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 20
+  m_Radius: 16
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &5604305505333103900
 Rigidbody:
