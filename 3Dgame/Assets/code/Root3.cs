@@ -34,7 +34,7 @@ public class Root3 : MonoBehaviour
     // Start is called before the first frame update
     void status(){
         if(this.tag == "ai"){
-            print(1);
+            //print(1);
             if((System.Math.Abs(agent.destination.x - agent.nextPosition.x))<20f && (System.Math.Abs(agent.destination.z - agent.nextPosition.z)) <20f){
             currentState = STATE.Idle;
             }
