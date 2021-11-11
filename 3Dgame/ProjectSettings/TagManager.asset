@@ -12,6 +12,7 @@ TagManager:
   - ExplosiveBarrel
   - enemy
   - key
+  - bullet
   layers:
   - Default
   - TransparentFX
