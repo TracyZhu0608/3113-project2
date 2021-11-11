@@ -416,7 +416,7 @@ MonoBehaviour:
   atkSpeed: 2.5
   reach: 20
   attack_radius: 20
-  explosion: {fileID: 0}
+  explosion: {fileID: 1427962332153456, guid: 301583a5af63a494298d60cd9f296909, type: 3}
   explosion_size: 2
   detected: []
   Fire_pos: {fileID: 5021962176755784538}
