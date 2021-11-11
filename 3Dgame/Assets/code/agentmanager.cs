@@ -31,6 +31,13 @@ public class agentmanager : MonoBehaviour
     void Update()
     {
         //print(isDragging);
+        foreach (var ai in selected)
+        {
+            if (ai==null)
+            {
+                selected.Remove(ai);
+            }
+        }
         if (Input.GetMouseButtonDown(0))
         {
             isDragging = true;

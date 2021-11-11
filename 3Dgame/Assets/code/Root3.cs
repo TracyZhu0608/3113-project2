@@ -12,7 +12,7 @@ public class Root3 : MonoBehaviour
     public TextMesh myStateText;
     [Header("Stats")]
     public target target1;
-    public int hp = 50;
+    public float hp = 50;
     public int def = 5;
     public int atk = 10;
     public int atkVar = 2;
@@ -82,6 +82,7 @@ public class Root3 : MonoBehaviour
         if(myStateText != null) myStateText.text = state.ToString();
     }
     public void shoot(Transform enemy_pos){
+        if(Bulletprefab==null){return;}
         GameObject newbullet = Instantiate(Bulletprefab, Fire_pos.position, Quaternion.identity);
         newbullet.GetComponent<Transform>().LookAt(enemy_pos);
 		newbullet.GetComponent<Rigidbody>().AddForce((enemy_pos.position - Fire_pos.position)*bullet_force);

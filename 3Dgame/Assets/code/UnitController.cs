@@ -11,13 +11,17 @@ public class UnitController : MonoBehaviour
     }
     public void MoveUnit(Vector3 dest)
     {
-        navAgent.destination = dest;
+        if(this!=null){
+            navAgent.destination = dest;
+        }
     }
 
     public void SetSelected(bool isSelected)
     {
         //TODO: 被选中底下有光
-        transform.Find("highlight").gameObject.SetActive(isSelected);
+        if(this!=null){
+            transform.Find("highlight").gameObject.SetActive(isSelected);
+        }
         //print(1);
     }
 }

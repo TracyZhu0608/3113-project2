@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5825506453043027090}
   m_Layer: 0
   m_Name: factory
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   myStateText: {fileID: 0}
-  target1: 0
+  target1: 1
   hp: 50
   def: 5
   atk: 10
@@ -76,7 +76,7 @@ MonoBehaviour:
   reach: 20
   attack_radius: 10
   explosion: {fileID: 1427962332153456, guid: 301583a5af63a494298d60cd9f296909, type: 3}
-  explosion_size: 2
+  explosion_size: 5
   detected: []
   Fire_pos: {fileID: 0}
   bullet_force: 50
@@ -90,7 +90,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 3674163867231716215}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 8
   m_Speed: 0
   m_Acceleration: 0
   avoidancePriority: 0
@@ -308,6 +308,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 6493000376390675229, guid: cc876d0db983c9d4bad2500026070353, type: 3}
+      propertyPath: myRoot
+      value: 
+      objectReference: {fileID: 3928442516900677592}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc876d0db983c9d4bad2500026070353, type: 3}
 --- !u!224 &8062173026472853244 stripped

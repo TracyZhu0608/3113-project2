@@ -13,7 +13,7 @@ public class lifebar : MonoBehaviour
     public Root3 myRoot;
     public Vector3 offsetPos; //头顶偏移量
     private float fullhp;
-    private float currenthp;
+    private float currenthp=0;
 
 
 
