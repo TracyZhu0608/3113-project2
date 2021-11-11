@@ -127,7 +127,7 @@ MonoBehaviour:
   atkSpeed: 1.5
   reach: 18
   attack_radius: 18
-  explosion: {fileID: 0}
+  explosion: {fileID: 1427962332153456, guid: 301583a5af63a494298d60cd9f296909, type: 3}
   explosion_size: 2
   detected: []
   Fire_pos: {fileID: 5256966914335350647, guid: 944c2dd5c31d3d448903796cad94b773, type: 3}
@@ -198,7 +198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6293741789657146637
 Transform:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ Transform:
   m_GameObject: {fileID: 8536470906886868033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.65, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 15, y: 1, z: 15}
   m_Children: []
   m_Father: {fileID: 8441409317062296398}
   m_RootOrder: 1

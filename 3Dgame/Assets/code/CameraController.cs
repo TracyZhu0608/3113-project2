@@ -19,14 +19,10 @@ public class CameraController : MonoBehaviour
     //zoom limit
     public float minY=20f;
     public float maxY=20f;
-    public Transform player;
-    public player main;
+
     // Update is called once per frame
     void Update()
     {
-        if(main.myRoot.hp<=0){
-            transform.LookAt(player);
-        }
         //camera move detection
         Vector3 position=transform.position;
         if(Input.GetKey("w")||Input.mousePosition.y>=Screen.height-BoarderThick){
