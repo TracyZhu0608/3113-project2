@@ -84,7 +84,7 @@ public class Root3 : MonoBehaviour
         else{
             if(other.tag == "ai"){
             detected.Add(other.GetComponent<Root3>());
-            print("add");
+            //print("add");
             }
         }
     }

@@ -62,5 +62,14 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
+    public void StartGame(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+    public void TryAgain(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+    }
 
+    public void Replay(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-2);
+    }
 }
