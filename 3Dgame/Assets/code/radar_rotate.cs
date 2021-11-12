@@ -13,7 +13,7 @@ public class radar_rotate : MonoBehaviour
     {
         float dist1 = Vector3.Distance(transform.position, player.transform.position);
         //print(dist1);
-        if (!GameObject.FindWithTag("key") && dist1 <= distance)
+        if (dist1 <= distance)
         {
             rotate = true;
         }

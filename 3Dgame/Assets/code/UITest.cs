@@ -14,6 +14,7 @@ public class UITest : MonoBehaviour
     public GameObject mission;
     public AudioSource assignment;
     public AudioSource yes;
+    public GameObject button;
 
 
     void Start()
@@ -43,8 +44,21 @@ public class UITest : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(Type(sentence));
+        //button.SetActive(true);
         yes.Play();
 
+    }
+
+    public void NextandButton(){
+        if (sentences.Count == 0){
+            End();
+            return;
+        }
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(Type(sentence));
+        button.SetActive(true);
+        yes.Play();
     }
 
     IEnumerator Type (string sentence){
@@ -59,7 +73,7 @@ public class UITest : MonoBehaviour
         animator.SetBool("isopen", false);
         mission.SetActive(true);
         assignment.Play();
-        Debug.Log("end");
+        //Debug.Log("end");
     }
     
 }

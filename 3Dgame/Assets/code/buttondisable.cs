@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class buttondisable : MonoBehaviour{
     Button buttonToHide;
+    public AudioSource alert;
     void Start(){
         buttonToHide = GetComponent<Button>();
 
@@ -13,5 +14,6 @@ public class buttondisable : MonoBehaviour{
 
     void HideButton(){
         buttonToHide.gameObject.SetActive(false);
+        alert.Stop();
     }
 }

@@ -11,7 +11,8 @@ public class Tutorial : MonoBehaviour
     bool firsttxt1 = true;
     bool firsttxt2 = true;
     bool firsttxt3 = true;
-    
+    float BoarderThick=10f;
+    public UITest dialogue;
 
     void Start()
     {
@@ -41,6 +42,17 @@ public class Tutorial : MonoBehaviour
     void Update()
     {
         //print(isDragging);
+        if(Input.GetKey("w")||Input.mousePosition.y>=Screen.height-BoarderThick||Input.GetKey("s")||Input.mousePosition.y<=BoarderThick||Input.GetKey("d")||Input.mousePosition.x>=Screen.width-BoarderThick||Input.GetKey("a")||Input.mousePosition.x<=BoarderThick)
+        {
+            if (firsttxt3 == true){
+                dialogue.NextandButton();
+                txt3.SetActive(false);
+                //txt1.SetActive(true);
+                firsttxt3 =false;
+            }
+
+
+        }
         if (Input.GetMouseButtonDown(0))
         {
             isDragging = true;
@@ -81,8 +93,11 @@ public class Tutorial : MonoBehaviour
 
                     if (firsttxt2 == true){
                         txt2.SetActive(false);
-                        StartCoroutine(ShowMessage(txt3, 10));
+                        dialogue.Next();
+                        //StartCoroutine(ShowMessage(txt3, 10));
                         firsttxt2 = false;
+                        firsttxt3=true;
+                        txt3.SetActive(true);
                     }
                 }
             }
@@ -113,7 +128,7 @@ public class Tutorial : MonoBehaviour
         var Bounds = ScreenHelper.GetViewportBounds(camera, mousePosition, Input.mousePosition);
         return Bounds.Contains(camera.WorldToViewportPoint(transform.position));
     }
-
+    /*
     IEnumerator ShowMessage (GameObject txt3, float delay) {
         if (firsttxt3 == true){
             txt3.SetActive(true);
@@ -123,4 +138,5 @@ public class Tutorial : MonoBehaviour
         
         firsttxt3 = false;
     }
+    */
 }
