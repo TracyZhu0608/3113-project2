@@ -8,7 +8,6 @@ public class second_tutorial : MonoBehaviour
     public GameObject txt2;
     bool firsttxt1 = true;
     bool firsttxt2 = true;
-    float BoarderThick=10f;
     public UITest dialogue;
     public radar_rotate radar;
     public GameObject fog;
@@ -38,7 +37,7 @@ public class second_tutorial : MonoBehaviour
     void Update()
     {
         //print(isDragging);
-        if(radar.rotate&&firsttxt2==true){
+        if(radar.rotate&&firsttxt1==true){
             txt1.SetActive(false);
             firsttxt1=false;
             txt2.SetActive(true);
