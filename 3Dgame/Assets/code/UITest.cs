@@ -22,6 +22,8 @@ public class UITest : MonoBehaviour
     {
         sentences = new Queue<string>();
         mission.SetActive(false);
+        assignment.Stop();
+        yes.Stop();
     }
 
     public void Start(allDia dialogue){
