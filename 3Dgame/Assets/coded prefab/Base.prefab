@@ -52,8 +52,8 @@ MonoBehaviour:
   currentState: 0
   myStateText: {fileID: 0}
   target1: 1
-  hp: 50
-  def: 5
+  hp: 250
+  def: 7
   atk: 10
   atkVar: 2
   atkSpeed: 2.5
@@ -415,12 +415,16 @@ PrefabInstance:
       value: Canvas_enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6493000376390675219, guid: cc876d0db983c9d4bad2500026070353, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1079.263
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493000376390675219, guid: cc876d0db983c9d4bad2500026070353, type: 3}
       propertyPath: m_LocalPosition.z
       value: -95
       objectReference: {fileID: 0}
     - target: {fileID: 6493000376390675219, guid: cc876d0db983c9d4bad2500026070353, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2
+      value: 38.747
       objectReference: {fileID: 0}
     - target: {fileID: 6493000376390675229, guid: cc876d0db983c9d4bad2500026070353, type: 3}
       propertyPath: myRoot
