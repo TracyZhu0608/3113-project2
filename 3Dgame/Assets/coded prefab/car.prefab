@@ -125,7 +125,7 @@ MonoBehaviour:
   atk: 15
   atkVar: 2
   atkSpeed: 2.5
-  reach: 15
+  reach: 18
   attack_radius: 15
   explosion: {fileID: 1427962332153456, guid: 301583a5af63a494298d60cd9f296909, type: 3}
   explosion_size: 2

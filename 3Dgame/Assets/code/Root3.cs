@@ -37,7 +37,7 @@ public class Root3 : MonoBehaviour
             //print(1);
             if(GameObject.FindWithTag("key")){
                 if((gameObject.GetComponent("player") as player) == null){
-                    if((System.Math.Abs(agent.destination.x - agent.nextPosition.x))<20f && (System.Math.Abs(agent.destination.z - agent.nextPosition.z)) <20f){
+                    if((System.Math.Abs(agent.destination.x - agent.nextPosition.x))<30f && (System.Math.Abs(agent.destination.z - agent.nextPosition.z)) <30f){
                         currentState = STATE.Idle;
                     }
                     else{

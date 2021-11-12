@@ -6,7 +6,7 @@ public class bullet : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start(){
-        Destroy(gameObject, 2.5f);
+        Destroy(gameObject, 1.8f);
     }
     void OntriggerEnter(){
         Destroy(gameObject);
