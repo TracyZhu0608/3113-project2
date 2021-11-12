@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class buttondisable : MonoBehaviour{
     Button buttonToHide;
-
     void Start(){
         buttonToHide = GetComponent<Button>();
 
