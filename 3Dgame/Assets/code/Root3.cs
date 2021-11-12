@@ -70,7 +70,7 @@ public class Root3 : MonoBehaviour
         if((damage-def)>=0){
             hp = hp - (damage - def);
         }
-        if(hp<=0&&((gameObject.GetComponent("player") as player) == null)){
+        if(hp<=0&&((gameObject.GetComponent("player") as player) == null&&((gameObject.GetComponent("End") as End) == null))){
             explosion.transform.localScale = Vector3.one * explosion_size;
             Instantiate(explosion, gameObject.transform.position, Quaternion.identity);
             //explosion.Play();

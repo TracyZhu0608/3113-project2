@@ -31,7 +31,7 @@ public class soundcontroller : MonoBehaviour
     // Play the animation for getting suck in
         fight.volume-=(Time.deltaTime/3);
         if(GameObject.FindWithTag("bullet")){yield break;}
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(8);
         inprogress.UnPause();
         fight.Stop();
     // Move this object somewhere off the screen

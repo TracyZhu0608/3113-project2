@@ -19,7 +19,8 @@ public class CameraController : MonoBehaviour
     //zoom limit
     public float minY=20f;
     public float maxY=20f;
-
+    public Transform player;
+    public player main;
     // Update is called once per frame
     void Update()
     {
@@ -46,5 +47,11 @@ public class CameraController : MonoBehaviour
         position.z=Mathf.Clamp(position.z,minZ,maxZ);
         transform.position=position;
 
+        if(main.myRoot.hp<=0){
+            Vector3 targetPosition = new Vector3(this.transform.position.x, player.position.y, player.position.z ) ;
+            transform.LookAt(targetPosition);
+            //transform.rotation=current;
+
+        }
     }
 }
