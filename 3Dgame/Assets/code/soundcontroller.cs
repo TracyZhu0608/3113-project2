@@ -32,6 +32,7 @@ public class soundcontroller : MonoBehaviour
         fight.volume-=(Time.deltaTime/3);
         if(GameObject.FindWithTag("bullet")){yield break;}
         yield return new WaitForSeconds(8);
+        if(GameObject.FindWithTag("bullet")){yield break;}
         inprogress.UnPause();
         fight.Stop();
     // Move this object somewhere off the screen

@@ -130,7 +130,7 @@ MonoBehaviour:
   explosion: {fileID: 1427962332153456, guid: 301583a5af63a494298d60cd9f296909, type: 3}
   explosion_size: 2
   detected: []
-  Fire_pos: {fileID: 5256966914335350647, guid: 944c2dd5c31d3d448903796cad94b773, type: 3}
+  Fire_pos: {fileID: 2444828773258846394, guid: 2727a61b4da55ca498d1879203fd916e, type: 3}
   bullet_force: 50
   Bulletprefab: {fileID: 8332227869068792443}
 --- !u!114 &7084021233211210748

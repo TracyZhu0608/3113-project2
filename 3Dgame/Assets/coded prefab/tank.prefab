@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbca47c3cb94bf1488898abec572221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRoot: {fileID: 0}
+  myRoot: {fileID: 5272874734516066384}
   targetRoot: {fileID: 0}
   enimies: []
   atkReady: 0
