@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 396132859181221319}
   - component: {fileID: 416450345578387070}
   - component: {fileID: 7700753453869341287}
-  - component: {fileID: 730810295699674897}
   m_Layer: 0
   m_Name: Base
   m_TagString: enemy
@@ -34,6 +33,7 @@ Transform:
   - {fileID: 1077181045486378158}
   - {fileID: 3875943427844770675}
   - {fileID: 6735246671419363666}
+  - {fileID: 3811578446761850583}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 33.028, z: 0}
@@ -52,8 +52,8 @@ MonoBehaviour:
   currentState: 0
   myStateText: {fileID: 0}
   target1: 1
-  hp: 50
-  def: 5
+  hp: 250
+  def: 7
   atk: 10
   atkVar: 2
   atkSpeed: 2.5
@@ -92,30 +92,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 15
+  m_Radius: 17
   m_Center: {x: 0, y: 0, z: 0}
---- !u!195 &730810295699674897
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713882238541673237}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 8
-  m_Speed: 0
-  m_Acceleration: 0
-  avoidancePriority: 50
-  m_AngularSpeed: 0
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &7300682731390761370
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +176,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7795201058699801848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3811578446761850583}
+  - component: {fileID: 5379886296993204212}
+  m_Layer: 0
+  m_Name: nevmesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3811578446761850583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795201058699801848}
+  m_LocalRotation: {x: -0, y: -0.28424963, z: -0, w: 0.9587503}
+  m_LocalPosition: {x: -4.7, y: 0, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4798105422006992669}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &5379886296993204212
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795201058699801848}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 10
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 10
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1077181045485901442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -384,12 +415,16 @@ PrefabInstance:
       value: Canvas_enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6493000376390675219, guid: cc876d0db983c9d4bad2500026070353, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1079.263
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493000376390675219, guid: cc876d0db983c9d4bad2500026070353, type: 3}
       propertyPath: m_LocalPosition.z
       value: -95
       objectReference: {fileID: 0}
     - target: {fileID: 6493000376390675219, guid: cc876d0db983c9d4bad2500026070353, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2
+      value: 38.747
       objectReference: {fileID: 0}
     - target: {fileID: 6493000376390675229, guid: cc876d0db983c9d4bad2500026070353, type: 3}
       propertyPath: myRoot
