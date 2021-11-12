@@ -10,7 +10,7 @@ public class Trigger : MonoBehaviour
     public void TriggerDialogue(){
         //FindObjectOfType<UITest>().Start(dialogue);
         talk.Start(dialogue);
-        commander.Play();
+        //commander.Play();
     }
     
 }

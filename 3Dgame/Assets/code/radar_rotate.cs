@@ -9,6 +9,7 @@ public class radar_rotate : MonoBehaviour
     public GameObject player;
     public float distance = 5.5f;
     public bool rotate = false;
+    public GameObject icon;
     void Update()
     {
         float dist1 = Vector3.Distance(transform.position, player.transform.position);
@@ -16,6 +17,7 @@ public class radar_rotate : MonoBehaviour
         if (dist1 <= distance)
         {
             rotate = true;
+            //icon.GetComponent<SpriteRenderer>().color = Color.green;
         }
         if (rotate)
         {

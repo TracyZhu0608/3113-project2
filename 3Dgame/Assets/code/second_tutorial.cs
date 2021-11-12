@@ -11,6 +11,7 @@ public class second_tutorial : MonoBehaviour
     public UITest dialogue;
     public radar_rotate radar;
     public GameObject fog;
+    public AudioSource yes;
     void Start()
     {
         txt1.SetActive(true);
@@ -78,11 +79,14 @@ public class second_tutorial : MonoBehaviour
                 foreach (var ai in selected)
                 {
                     ai.MoveUnit(hit.point);
-                    if(ai.GetComponent("player") as player==null&&firsttxt1==false){
+                    if(ai.GetComponent("player") as player==null&&firsttxt1==false&&firsttxt2!=false){
                         txt2.SetActive(false);
                         dialogue.NextandButton();
                         //StartCoroutine(ShowMessage(txt3, 10));
                         firsttxt2 = false;
+                    }
+                    else if(ai.GetComponent("player") as player==null){
+                        yes.Play();
                     }
                 }
             }

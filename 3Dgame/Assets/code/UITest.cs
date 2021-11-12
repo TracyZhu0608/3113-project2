@@ -15,7 +15,8 @@ public class UITest : MonoBehaviour
     public AudioSource assignment;
     public AudioSource yes;
     public GameObject button;
-
+    public GameObject fight;
+    public GameObject inprogress;
 
     void Start()
     {
@@ -71,6 +72,8 @@ public class UITest : MonoBehaviour
 
     public void End(){
         animator.SetBool("isopen", false);
+        fight.SetActive(true);
+        inprogress.SetActive(true);
         mission.SetActive(true);
         assignment.Play();
         //Debug.Log("end");
