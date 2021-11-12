@@ -13,6 +13,8 @@ public class Tutorial : MonoBehaviour
     bool firsttxt3 = true;
     float BoarderThick=10f;
     public UITest dialogue;
+    public GameObject fight;
+    public GameObject inprogress;
 
     void Start()
     {
@@ -44,11 +46,13 @@ public class Tutorial : MonoBehaviour
         //print(isDragging);
         if(Input.GetKey("w")||Input.mousePosition.y>=Screen.height-BoarderThick||Input.GetKey("s")||Input.mousePosition.y<=BoarderThick||Input.GetKey("d")||Input.mousePosition.x>=Screen.width-BoarderThick||Input.GetKey("a")||Input.mousePosition.x<=BoarderThick)
         {
-            if (firsttxt3 == true){
+            if (firsttxt3 == true&&firsttxt1==false&&firsttxt2==false){
                 dialogue.NextandButton();
                 txt3.SetActive(false);
                 //txt1.SetActive(true);
                 firsttxt3 =false;
+                fight.SetActive(true);
+                inprogress.SetActive(true);
             }
 
 

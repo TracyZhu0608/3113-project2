@@ -8,7 +8,7 @@ public class radar_rotate : MonoBehaviour
     // Update is called once per frame
     public GameObject player;
     public float distance = 5.5f;
-    bool rotate = false;
+    public bool rotate = false;
     void Update()
     {
         float dist1 = Vector3.Distance(transform.position, player.transform.position);
