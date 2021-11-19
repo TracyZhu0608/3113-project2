@@ -13,8 +13,6 @@ public class Tutorial : MonoBehaviour
     bool firsttxt3 = true;
     float BoarderThick=10f;
     public UITest dialogue;
-    public GameObject fight;
-    public GameObject inprogress;
 
     void Start()
     {
@@ -51,8 +49,6 @@ public class Tutorial : MonoBehaviour
                 txt3.SetActive(false);
                 //txt1.SetActive(true);
                 firsttxt3 =false;
-                fight.SetActive(true);
-                inprogress.SetActive(true);
             }
 
 
