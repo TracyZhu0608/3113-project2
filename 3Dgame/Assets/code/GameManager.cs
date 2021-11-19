@@ -6,11 +6,16 @@ public class GameManager : MonoBehaviour
 {
     public GameObject pauseMenu;
     public GameObject quitButton;
-
+    public AudioSource alert;
+    public AudioSource music1;
+    
+    public AudioSource music2;
+    
+    public AudioSource music3;
     private AudioSource[] allAudioSources;
     void Start(){
         Resume();
-        
+        alert.Play();
         #if UNITY_WEBGL
         quitButton.SetActive(false);
         #endif
@@ -52,6 +57,10 @@ public class GameManager : MonoBehaviour
         publicVars.paused = false;
         Time.timeScale = 1;
         StartAllAudio();
+        alert.Stop();
+        music1.Stop();
+        music2.Stop();
+        music3.Stop();
     }
 
     public void Restart(){
